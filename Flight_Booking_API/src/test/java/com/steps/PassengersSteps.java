@@ -1,7 +1,6 @@
 package com.steps;
 
 
-
 import io.cucumber.java.en.*;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
@@ -23,15 +22,15 @@ public class PassengersSteps {
         token = AuthUtil.getAccessToken();
     }
 
-    @When("I add passenger with id {string} name {string} mobile {string} gender {string} aadhaar {string} address {string}")
-    public void addPassenger(String idVal, String name, String mobile, String gender, String aadhaar, String address) {
-    	int id=Integer.parseInt(idVal);
+    @When("I add passenger with id {string} name {string} mobile {string} gender {string} aadhar {string} address {string}")
+    public void addPassenger(String id, String name, String mobile, String gender, String aadhar, String address) {
+
         Map<String, String> form = new HashMap<>();
-        form.put("passengerId", String.valueOf(id));
+        form.put("passengerId", id);
         form.put("passengerName", name);
         form.put("passengerMobile", mobile);
         form.put("passengerGender", gender);
-        form.put("passengerAadhaarNumber", aadhaar);
+        form.put("passengerAadharNumber", aadhar); // ✅ matches backend's expected key spelling
         form.put("passengerAddress", address);
 
         response = given()
@@ -43,6 +42,7 @@ public class PassengersSteps {
         .then()
             .extract().response();
     }
+
 
     @Then("the response status should be {string}")
     public void response_status_should_be(String status) {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.827" tests="38" skipped="0" failures="38" errors="0" timestamp="2025-08-12T06:53:17.934332100Z">
-<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.1" time="0.081">
+<testsuite name="Cucumber" time="0.973" tests="43" skipped="0" failures="43" errors="0" timestamp="2025-08-12T07:07:56.267162100Z">
+<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.1" time="0.073">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -9,7 +9,52 @@ Then the response status should be "200"....................................skip
 And the passenger with id "9" should have name "Matilda"....................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.2" time="0.007">
+<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.2" time="0.005">
+<failure/>
+<system-out><![CDATA[
+Given I have a valid access token...........................................undefined
+When I add passenger with id "10" name "Natilda" mobile "9898765655" gender "Male" aadhar "1239876766B" address "Kolkata".skipped
+Then the response status should be "200"....................................skipped
+And the passenger with id "10" should have name "Natilda"...................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.3" time="0.006">
+<failure/>
+<system-out><![CDATA[
+Given I have a valid access token...........................................undefined
+When I add passenger with id "11" name "Rick" mobile "9898765656" gender "Female" aadhar "1239876767C" address "Delhi".skipped
+Then the response status should be "200"....................................skipped
+And the passenger with id "11" should have name "Rick"......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.4" time="0.006">
+<failure/>
+<system-out><![CDATA[
+Given I have a valid access token...........................................undefined
+When I add passenger with id "12" name "Jhon" mobile "9898765657" gender "Male" aadhar "1239876768A" address "Pune".skipped
+Then the response status should be "200"....................................skipped
+And the passenger with id "12" should have name "Jhon"......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.5" time="0.007">
+<failure/>
+<system-out><![CDATA[
+Given I have a valid access token...........................................undefined
+When I add passenger with id "13" name "Rahul" mobile "9898765658" gender "Female" aadhar "1239876769B" address "Chennai".skipped
+Then the response status should be "200"....................................skipped
+And the passenger with id "13" should have name "Rahul".....................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.6" time="0.006">
+<failure/>
+<system-out><![CDATA[
+Given I have a valid access token...........................................undefined
+When I add passenger with id "14" name "Nick" mobile "9898765659" gender "Male" aadhar "1239876770C" address "Kolkata".skipped
+Then the response status should be "200"....................................skipped
+And the passenger with id "14" should have name "Nick"......................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Passenger Service API" name="Add a passenger and verify retrieval by id - #1.7" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -18,7 +63,7 @@ Then the response status should be "200"....................................skip
 And the passenger with id "15" should have name "Joe".......................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.1: View passenger list and verify contains id &quot;1&quot;" time="0.006">
+<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.1: View passenger list and verify contains id &quot;1&quot;" time="0.012">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -27,7 +72,7 @@ Then the response status should be "200"....................................skip
 And the list should contain passenger id "1"................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.2: View passenger list and verify contains id &quot;2&quot;" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.2: View passenger list and verify contains id &quot;2&quot;" time="0.007">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -36,7 +81,7 @@ Then the response status should be "200"....................................skip
 And the list should contain passenger id "2"................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.3: View passenger list and verify contains id &quot;9&quot;" time="0.004">
+<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.3: View passenger list and verify contains id &quot;9&quot;" time="0.006">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -45,7 +90,7 @@ Then the response status should be "200"....................................skip
 And the list should contain passenger id "9"................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.4: View passenger list and verify contains id &quot;10&quot;" time="0.003">
+<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.4: View passenger list and verify contains id &quot;10&quot;" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -54,7 +99,7 @@ Then the response status should be "200"....................................skip
 And the list should contain passenger id "10"...............................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.5: View passenger list and verify contains id &quot;11&quot;" time="0.004">
+<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.5: View passenger list and verify contains id &quot;11&quot;" time="0.005">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -63,7 +108,7 @@ Then the response status should be "200"....................................skip
 And the list should contain passenger id "11"...............................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.6: View passenger list and verify contains id &quot;12&quot;" time="0.014">
+<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.6: View passenger list and verify contains id &quot;12&quot;" time="0.006">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -72,7 +117,7 @@ Then the response status should be "200"....................................skip
 And the list should contain passenger id "12"...............................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.7: View passenger list and verify contains id &quot;13&quot;" time="0.003">
+<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.7: View passenger list and verify contains id &quot;13&quot;" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -81,7 +126,7 @@ Then the response status should be "200"....................................skip
 And the list should contain passenger id "13"...............................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.8: View passenger list and verify contains id &quot;14&quot;" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger list and verify contains id &quot;&lt;id&gt;&quot; - #1.8: View passenger list and verify contains id &quot;14&quot;" time="0.009">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -99,7 +144,7 @@ Then the response status should be "200"....................................skip
 And the list should contain passenger id "15"...............................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.1" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.1" time="0.006">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -115,7 +160,7 @@ When I fetch passenger by name "Priya" and mobile "1245678231"..............skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.3" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.3" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -123,7 +168,7 @@ When I fetch passenger by name "Rakesh" and mobile "1256788572".............skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.4" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.4" time="0.006">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -131,7 +176,7 @@ When I fetch passenger by name "Priya" and mobile "1267898913"..............skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.5" time="0.003">
+<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.5" time="0.007">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -147,7 +192,7 @@ When I fetch passenger by name "Henry" and mobile "9898765659"..............skip
 Then the response status should be "404"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.7" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.7" time="0.003">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -155,7 +200,7 @@ When I fetch passenger by name "Harry" and mobile "9898765660"..............skip
 Then the response status should be "404"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.8" time="0.003">
+<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.8" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -163,7 +208,7 @@ When I fetch passenger by name "Natasha" and mobile "9898765661"............skip
 Then the response status should be "404"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.9" time="0.004">
+<testcase classname="Passenger Service API" name="View passenger by name and mobile - #1.9" time="0.005">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -171,7 +216,7 @@ When I fetch passenger by name "Angela" and mobile "9898765662".............skip
 Then the response status should be "404"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by id - #1.1" time="0.004">
+<testcase classname="Passenger Service API" name="View passenger by id - #1.1" time="0.003">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -187,7 +232,7 @@ When I fetch passenger by id "2"............................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by id - #1.3" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger by id - #1.3" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -203,7 +248,7 @@ When I fetch passenger by id "10"...........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by id - #1.5" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger by id - #1.5" time="0.006">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -211,7 +256,7 @@ When I fetch passenger by id "11"...........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by id - #1.6" time="0.005">
+<testcase classname="Passenger Service API" name="View passenger by id - #1.6" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -227,7 +272,7 @@ When I fetch passenger by id "13"...........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by id - #1.8" time="0.006">
+<testcase classname="Passenger Service API" name="View passenger by id - #1.8" time="0.003">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -235,7 +280,7 @@ When I fetch passenger by id "14"...........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="View passenger by id - #1.9" time="0.007">
+<testcase classname="Passenger Service API" name="View passenger by id - #1.9" time="0.005">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -243,7 +288,7 @@ When I fetch passenger by id "15"...........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Delete passenger by id - #1.1" time="0.004">
+<testcase classname="Passenger Service API" name="Delete passenger by id - #1.1" time="0.003">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -251,7 +296,7 @@ When I delete passenger with id "1".........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Delete passenger by id - #1.2" time="0.003">
+<testcase classname="Passenger Service API" name="Delete passenger by id - #1.2" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -259,7 +304,7 @@ When I delete passenger with id "2".........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Delete passenger by id - #1.3" time="0.004">
+<testcase classname="Passenger Service API" name="Delete passenger by id - #1.3" time="0.003">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -267,7 +312,7 @@ When I delete passenger with id "9".........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Delete passenger by id - #1.4" time="0.005">
+<testcase classname="Passenger Service API" name="Delete passenger by id - #1.4" time="0.022">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -283,7 +328,7 @@ When I delete passenger with id "11"........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Delete passenger by id - #1.6" time="0.003">
+<testcase classname="Passenger Service API" name="Delete passenger by id - #1.6" time="0.004">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -291,7 +336,7 @@ When I delete passenger with id "12"........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Delete passenger by id - #1.7" time="0.004">
+<testcase classname="Passenger Service API" name="Delete passenger by id - #1.7" time="0.003">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -299,7 +344,7 @@ When I delete passenger with id "13"........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Delete passenger by id - #1.8" time="0.003">
+<testcase classname="Passenger Service API" name="Delete passenger by id - #1.8" time="0.005">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
@@ -307,7 +352,7 @@ When I delete passenger with id "14"........................................skip
 Then the response status should be "200"....................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="Passenger Service API" name="Delete passenger by id - #1.9" time="0.005">
+<testcase classname="Passenger Service API" name="Delete passenger by id - #1.9" time="0.002">
 <failure/>
 <system-out><![CDATA[
 Given I have a valid access token...........................................undefined
