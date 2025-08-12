@@ -2,6 +2,7 @@ package com.runners;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.Listeners;
 
 @CucumberOptions(
     features = "src/test/resources/features",
@@ -13,4 +14,5 @@ import io.cucumber.testng.CucumberOptions;
     },
     monochrome = true
 )
+@Listeners(com.utils.ExtentReportListener.class)
 public class TestRunners extends AbstractTestNGCucumberTests { }

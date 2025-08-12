@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.utils.ExtentReportListener;
 
 public class TestNGCucumberReport {
@@ -15,8 +17,17 @@ public class TestNGCucumberReport {
 
     @BeforeClass
     public void startReport() {
-        extent = ExtentReportListener.getReportObject();
+        String path = System.getProperty("user.dir") + "/target/ExtentReport.html";
+        ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+        reporter.config().setReportName("Flight Booking API Tests");
+        reporter.config().setDocumentTitle("Automation Report");
+        reporter.config().setTheme(Theme.DARK);
+
+        extent = new ExtentReports();
+        extent.attachReporter(reporter);
+        extent.setSystemInfo("Tester", "Your Name");
     }
+
 
     @AfterClass
     public void endReport() {
