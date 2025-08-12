@@ -43,7 +43,6 @@ public class PassengersSteps {
             .extract().response();
     }
 
-
     @Then("the response status should be {string}")
     public void response_status_should_be(String status) {
         response.then().statusCode(Integer.parseInt(status));

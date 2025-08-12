@@ -12,10 +12,7 @@ Feature: Passenger Service API
     | id  | name    | phone       | gender | aadhar       | address  | status |
     | 9   | Matilda | 9898765654  | Female | 1239876765Y  | Chennai  | 200    |
     | 10  | Natilda | 9898765655  | Male   | 1239876766B  | Kolkata  | 200    |
-    
 	
-	
-   
 
   Scenario Outline: View passenger list and verify contains id "<id>"
     When I fetch passenger list
