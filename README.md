@@ -22,6 +22,47 @@ The Flight Booking System API Testing repository is designed to ensure that the 
 - **Utilities:** Helpers for request generation, response validation, and test data setup.
 - **Documentation:** Clear instructions on how to run tests, interpret reports, and extend the suite for new functionality.
 
+---
+
+## Repository Structure
+
+The repository is organized as follows:
+
+```
+Flight_Booking_System_API-testing/
+│
+├── Flight_Booking_API/
+│   ├── src/
+│   │   ├── test/
+│   │   │   ├── java/
+│   │   │   │   └── com/                     # Java packages (step definitions, utils, config, etc.)
+│   │   │   └── resources/
+│   │   │       ├── features/                # Cucumber feature files
+│   │   │       │   └── passenger.feature
+│   │   │       └── schemas/                  # JSON Schema files for validation
+│   │   │           └── passenger-schema.json
+│   │
+│   ├── target/                               # Build output directory
+│   │   ├── classes/                          # Compiled class files
+│   │   ├── test-classes/                     # Compiled test classes
+│   │   ├── cucumber.html                     # Cucumber HTML report
+│   │   ├── cucumber.json                     # Cucumber JSON report
+│   │   └── ExtentReport.html                  # ExtentReports HTML output
+│   │
+│   ├── test-output/                           # TestNG output folder
+│   │
+│   ├── pom.xml                                # Maven dependencies and configuration
+│   ├── testng.xml                             # TestNG execution configuration
+│   └── README.md                              # Project documentation
+```
+- **features/** → Cucumber Gherkin feature files.
+- **schemas/** → JSON schema definitions for API response validation.
+- **com/** → Java source code for step definitions, utility classes, and configuration.
+- **target/** → Generated build and test reports.
+- **ExtentReport.html** → Custom HTML report from ExtentReports.
+- **cucumber.html / cucumber.json** → Cucumber reports.
+- **pom.xml** → Project dependencies and build setup.
+
 ### Use Cases
 
 - **Developers:** Validate new features or changes to the API before deployment.
