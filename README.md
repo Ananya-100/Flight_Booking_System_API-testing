@@ -56,12 +56,12 @@ The Flight Booking System API Testing repository is designed to ensure that the 
   - Automated View Passenger List API (GET /viewPassengerList) (Automation)
   - Implemented data-driven testing with external test data (Testing)
 
-- **Prabal Gupta**
+- **Vedant Nikalje**
   - Automated View Passenger by ID API (GET /viewPassengerById) (Automation)
   - Automated Delete Passenger API (DELETE /deletePassengerById) (Automation)
   - Implemented negative test scenarios and error handling (Testing)
 
-- **Vedant Nikalje**
+- **Prabal Gupta**
   - Automated Add Passenger API (POST /addPassenger) (Automation)
   - Automated View Passenger by Name/Mobile API (GET) (Automation)
 
