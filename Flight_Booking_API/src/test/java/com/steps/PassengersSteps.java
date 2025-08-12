@@ -16,6 +16,35 @@ import java.util.Map;
 public class PassengersSteps {
     private String token;
     private Response response;
+    
+ // Inner POJO for Passenger
+    public static class Passenger {
+        private String passengerId;
+        private String passengerName;
+        private String passengerMobile;
+        private String passengerGender;
+        private String passengerAadharNumber; // ✅ match backend spelling
+        private String passengerAddress;
+
+        public Passenger(String passengerId, String passengerName, String passengerMobile,
+                         String passengerGender, String passengerAadharNumber, String passengerAddress) {
+            this.passengerId = passengerId;
+            this.passengerName = passengerName;
+            this.passengerMobile = passengerMobile;
+            this.passengerGender = passengerGender;
+            this.passengerAadharNumber = passengerAadharNumber;
+            this.passengerAddress = passengerAddress;
+        }
+
+        // Getters (needed for JSON serialization)
+        public String getPassengerId() { return passengerId; }
+        public String getPassengerName() { return passengerName; }
+        public String getPassengerMobile() { return passengerMobile; }
+        public String getPassengerGender() { return passengerGender; }
+        public String getPassengerAadharNumber() { return passengerAadharNumber; }
+        public String getPassengerAddress() { return passengerAddress; }
+    }
+
 
     @Given("I have a valid access token")
     public void i_have_a_valid_access_token() {
@@ -24,38 +53,26 @@ public class PassengersSteps {
 
     @When("I add passenger with id {string} name {string} mobile {string} gender {string} aadhar {string} address {string}")
     public void addPassenger(String id, String name, String mobile, String gender, String aadhar, String address) {
-
-        Map<String, String> form = new HashMap<>();
-        form.put("passengerId", id);
-        form.put("passengerName", name);
-        form.put("passengerMobile", mobile);
-        form.put("passengerGender", gender);
-        form.put("passengerAadharNumber", aadhar); // ✅ matches backend's expected key spelling
-        form.put("passengerAddress", address);
+    	
+    	Passenger passenger = new Passenger(id, name, mobile, gender, aadhar, address);
 
         response = given()
             .spec(ApiConfig.REQUEST)
             .auth().oauth2(token)
-            .formParams(form)
+            .contentType("application/json")
+            .body(passenger)
         .when()
             .post("/addPassenger")
         .then()
             .extract().response();
+
+    	
     }
 
     @Then("the response status should be {string}")
     public void response_status_should_be(String status) {
         response.then().statusCode(Integer.parseInt(status));
     }
-//    @Then("the response status should be {String}")
-//    public void response_status_should_be_String(String status) {
-//        response.then().statusCode(Integer.parseInt(status));
-//    }
-//    @Then("the response status should be {string}")
-//    public void the_response_status_should_be(String status) {
-//        // Write code here that turns the phrase above into concrete actions
-//    	response.then().statusCode(Integer.parseInt(status));
-//    }
 
     @Then("the passenger with id {string} should have name {string}")
     public void passenger_should_have_name(String id, String expectedName) {
@@ -101,4 +118,5 @@ public class PassengersSteps {
         // Write code here that turns the phrase above into concrete actions
     	response = given().spec(ApiConfig.REQUEST).auth().oauth2(token).when().get("/viewPassengerById/"+id).then().extract().response();
     }
+    
 }
