@@ -1,22 +1,16 @@
 package com.runners;
 
-import org.junit.runner.RunWith;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = {"com.steps"},
     plugin = {
-    		"pretty",
-	        "html:target/cucumber.html"
-	        
-    		
+        "pretty",
+        "html:target/cucumber.html",
+        "json:target/cucumber.json"
     },
     monochrome = true
 )
-public class TestRunners { 
-}
-
-//this is updated to check push.
+public class TestRunners extends AbstractTestNGCucumberTests { }

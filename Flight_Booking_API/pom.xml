@@ -62,8 +62,44 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- (Optional) Allure/Extent for reports -->
-
+	    <!-- TestNG -->
+	    <dependency>
+	        <groupId>org.testng</groupId>
+	        <artifactId>testng</artifactId>
+	        <version>7.10.2</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Cucumber + TestNG -->
+	    <dependency>
+	        <groupId>io.cucumber</groupId>
+	        <artifactId>cucumber-testng</artifactId>
+	        <version>7.18.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Cucumber Core -->
+	    <dependency>
+	        <groupId>io.cucumber</groupId>
+	        <artifactId>cucumber-java</artifactId>
+	        <version>7.18.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- Cucumber Reporting -->
+	    <dependency>
+	        <groupId>io.cucumber</groupId>
+	        <artifactId>cucumber-core</artifactId>
+	        <version>7.18.0</version>
+	        <scope>test</scope>
+	    </dependency>
+	
+	    <!-- ExtentReports -->
+	    <dependency>
+	        <groupId>com.aventstack</groupId>
+	        <artifactId>extentreports</artifactId>
+	        <version>5.1.1</version>
+	    </dependency>
 
 	</dependencies>
 	<build>
